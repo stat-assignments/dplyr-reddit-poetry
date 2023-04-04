@@ -10,7 +10,7 @@ number-depth: 2
 # Background Information {-}
 
 In this assignment, you will analyze poems written by two of Reddit's famous poets: `Poem_for_your_sprog` and `SchnoodleDoodleDo`. 
-I scraped these poems using the `RedditExtractoR` package on March 16, 2023. [Code](get_data.R)
+I scraped these poems using the `RedditExtractoR` package on March 16, 2023. [Code](https://raw.githubusercontent.com/unl-stat251/06-strings/main/get_data.R)
 
 
 `poem_for_your_sprog` writes poems in response to other people's comments ('sprog' means child) on `AskReddit` posts. `SchnoodleDoodleDo` writes poems in response to comments and posts on subreddits that are usually related to cute or wholesome content, such as `aww`, `WhatsWrongWithYourDog`, `wholesomememes`, and more. 
