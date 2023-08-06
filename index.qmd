@@ -1,7 +1,6 @@
 ---
 title: "String Processing in R and Python"
 author: "Your Name"
-date: "Due: March 27, 2023"
 output: html_document
 number-sections: true
 number-depth: 2
@@ -10,13 +9,13 @@ number-depth: 2
 # Background Information {-}
 
 In this assignment, you will analyze poems written by two of Reddit's famous poets: `Poem_for_your_sprog` and `SchnoodleDoodleDo`. 
-I scraped these poems using the `RedditExtractoR` package on March 16, 2023. [Code](https://raw.githubusercontent.com/unl-stat251/06-strings/main/get_data.R)
+I scraped these poems using the `RedditExtractoR` package on March 16, 2023. [Code](get_data.R)
 
 
 `poem_for_your_sprog` writes poems in response to other people's comments ('sprog' means child) on `AskReddit` posts. `SchnoodleDoodleDo` writes poems in response to comments and posts on subreddits that are usually related to cute or wholesome content, such as `aww`, `WhatsWrongWithYourDog`, `wholesomememes`, and more. 
 
 
-You can find the CSV files of each writer's reddit comments in `sprog_poems.csv` and `schnoodle_poems.csv`, respectively.
+You can find the CSV files of each writer's reddit comments in `sprog_poems.csv` and `schnoodle_poems.csv`, respectively. Historical versions of these CSVs are also saved in the repo for posterity's sake, as a number of users left Reddit in June 2023 and deleted their accounts and/or comments. 
 
 As part of this analysis, you should learn how to do the following tasks:
 
@@ -32,10 +31,10 @@ These poems may address adult topics and/or use strong or vulgar language, as th
 I have not censored them in any way because I want you to work with data that is realistic. 
 You should find a few test cases which you are comfortable with to use to test out your code, but you do not need to read all of the poems (and in both cases, I've provided you with approximately 1000 samples, so it's *probably* too much to read in any case). 
 
-Here are 5 indices (counting from 1) which are approximately G or PG in content for each poet:
+Here are 5 indices (counting from 1) which are approximately G or PG in content for each poet, using the most recent snapshot CSV (20230806):
 
-- Sprog poems: 1, 2, 3, 4, 7
-- SchnoodleDoodleDo poems: 1, 2, 3, 5, 6
+- Sprog poems: 2, 6, 7, 8, 9
+- SchnoodleDoodleDo poems: 1, 2, 3, 4, 5
 
 These should be sufficient for you to test your code even if you are worried about being exposed to adult themes or language during this activity.
 
@@ -44,8 +43,6 @@ These should be sufficient for you to test your code even if you are worried abo
 
 Choose a poet and complete the following tasks in R or Python. 
 Once you finish the set of tasks provided here, start on the other poet in the other language. 
-You will get bonus points up to 50% of the assignment's value for completing the tasks in both languages. 
-
 
 # Using R to analyze <Replace this with poet's username>'s poems
 
