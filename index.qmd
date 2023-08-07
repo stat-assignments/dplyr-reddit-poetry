@@ -1,5 +1,5 @@
 ---
-title: "String Processing in R and Python"
+title: "String Processing and Data Wrangling in R and Python"
 author: "Your Name"
 output: html_document
 number-sections: true
