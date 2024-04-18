@@ -1,15 +1,15 @@
 ---
 title: "String Processing and Data Wrangling in R and Python"
+execute:
+  error: true
 author: "Your Name"
 output: html_document
-number-sections: true
-number-depth: 2
 ---
 
 # Background Information {-}
 
 In this assignment, you will analyze poems written by two of Reddit's famous poets: `Poem_for_your_sprog` and `SchnoodleDoodleDo`. 
-I scraped these poems using the `RedditExtractoR` package on March 16, 2023. [Code](get_data.R)
+These poems were scraped using the `RedditExtractoR` package on June 15, 2023. [Code](get_data.R) Note: This package no longer works because of changes to reddit's API that became effective on July 1, 2023.
 
 
 `poem_for_your_sprog` writes poems in response to other people's comments ('sprog' means child) on `AskReddit` posts. `SchnoodleDoodleDo` writes poems in response to comments and posts on subreddits that are usually related to cute or wholesome content, such as `aww`, `WhatsWrongWithYourDog`, `wholesomememes`, and more. 
@@ -33,7 +33,7 @@ You should find a few test cases which you are comfortable with to use to test o
 
 Here are 5 indices (counting from 1) which are approximately G or PG in content for each poet, using the most recent snapshot CSV (20230806):
 
-- Sprog poems: 2, 6, 7, 8, 9
+- Sprog poems: 1, 2, 3, 6, 7
 - SchnoodleDoodleDo poems: 1, 2, 3, 4, 5
 
 These should be sufficient for you to test your code even if you are worried about being exposed to adult themes or language during this activity.
