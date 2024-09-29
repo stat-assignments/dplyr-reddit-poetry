@@ -2,107 +2,110 @@
 title: "Poetry Checkpoints"
 ---
 
+```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr)
+library(dplyr)
+knitr::opts_chunk$set(echo=FALSE, message=FALSE)
+```
 
 # Problem 1: Split the poem into lines and create a data frame {#part1}
 
 Here is some example formatted output from a poem selected from each poet's works to give you an idea of what I am expecting your code to produce (for all of the poems, not just for one single poem). 
 
-## Sprog Poem 2
+## Sprog Poem 1
 
 ### Poem
 
-[link](https://www.reddit.com/r/AskReddit/comments/gc4qru/what_is_something_that_is_expensive_but_only/fp9qu8a/?context=3)
+[link](https://www.reddit.com/r/AskReddit/comments/gktfx1/whats_something_youre_glad_your_friend_introduced/)
 
-    "It's Expensive Being Poor."
 
-    "Besieged by a bill, or deficient in rent?
-    Devoid of a dollar, bereft of a cent?
-    Depleted, defeated, or beggared and broke?
-    Well never you panic, you poorest of folk!
+    "Poem for a Friend"
 
-    "That mountain of debt that you're facing with dread?
-    You pay with tomorrow's resources instead!
-    Your future is waiting to fill your account -
-    At charges quadruple the normal amount!
+    I know that I don't always see you enough -  
+    With work and with kids and a marriage, it's tough.  
+    You wake and you take it by dawn and by day -  
+    And noon turns to evening, and time slips away. 
 
-    "And if you're perturbed as you ponder the loan -
-    That next month arrives with the bills of its own -
-    That maybe you'll weep for your choices before -
-    Then never you worry!
+    "We'll have to do something," we said when we met -  
+    But you and me, brother, we tend to forget.  
+    We're working -  
+    we're busy -  
+    we both try our best -  
+    And life doesn't always leave room for the rest.  
 
-    … you just borrow more."
+    But then, with a smile, I remember it's you.  
+    We say that we'll meet, and eventually do.  
+    You're there when I need you, and that doesn't end.  
+    So buddy, be seeing you... 
+
+    maybe.
+
+    Your friend.
+
+    ^^^:)
+
 
 ### SampleData
 
 I've selected just a few of the original columns to go along with the new columns created while answering this question.
 
-|date_utc   |  timestamp|subreddit | poem_id| line_no|lines                                                 |
-|:----------|----------:|:---------|-------:|-------:|:-----------------------------------------------------|
-|2020-05-02 | 1588432617|AskReddit |       2|       1|> "It's Expensive Being Poor."                        |
-|2020-05-02 | 1588432617|AskReddit |       2|       2|                                                      |
-|2020-05-02 | 1588432617|AskReddit |       2|       3|"Besieged by a bill, or deficient in rent?            |
-|2020-05-02 | 1588432617|AskReddit |       2|       4|Devoid of a dollar, bereft of a cent?                 |
-|2020-05-02 | 1588432617|AskReddit |       2|       5|Depleted, defeated, or beggared and broke?            |
-|2020-05-02 | 1588432617|AskReddit |       2|       6|Well never you panic, you poorest of folk!            |
-|2020-05-02 | 1588432617|AskReddit |       2|       7|                                                      |
-|2020-05-02 | 1588432617|AskReddit |       2|       8|"That mountain of debt that you're facing with dread? |
-|2020-05-02 | 1588432617|AskReddit |       2|       9|You pay with *tomorrow's* resources instead!          |
-|2020-05-02 | 1588432617|AskReddit |       2|      10|Your future is waiting to fill your account -         |
-|2020-05-02 | 1588432617|AskReddit |       2|      11|At charges quadruple the normal amount!               |
-|2020-05-02 | 1588432617|AskReddit |       2|      12|                                                      |
-|2020-05-02 | 1588432617|AskReddit |       2|      13|"And if you're perturbed as you ponder the loan -     |
-|2020-05-02 | 1588432617|AskReddit |       2|      14|That next month arrives with the bills of its own -   |
-|2020-05-02 | 1588432617|AskReddit |       2|      15|That maybe you'll weep for your choices before -      |
-|2020-05-02 | 1588432617|AskReddit |       2|      16|Then never you worry!                                 |
-|2020-05-02 | 1588432617|AskReddit |       2|      17|                                                      |
-|2020-05-02 | 1588432617|AskReddit |       2|      18|& you just borrow more."                              |
+```{r message = FALSE, echo=FALSE}
+library(dplyr)
+readr::read_csv("checkpoints_data/sprog_checkpoint1.csv", na = "") %>% knitr::kable()
+```
 
 
-## Schnoodle Poem 6
+## Schnoodle Poem 1
 
 ### Poem
-[link](https://www.reddit.com/r/aww/comments/silftg/the_two_types_of_dogs/hv9rcvl/?context=3)
+[link](https://www.reddit.com/r/velvethippos/comments/v2jnpz/this_little_lady_is_fostering_with_us_she_was)
 
-    > Hes not my real brother...   
-    ----
-    the human fills the swimming pool -
-    it makes us So excite :@) :@D 
-    i stand n drink the water, cool
-    but Brother fren takes flight...
-    he Leaps in front of pouring hose,
-    the WaTeR tries to BITE!!
-    but why he does, nobody knows -
-    (the boy is not quite right...)
-    n after when the pool is fill,
-    we'll both get in, n mellow...
-    i Love my bro,
-    but even still
-    he turns the water
-    yellow...
-    ❤️
+```
+> 'You gotta spoil her rotten'
+
+i was the pup, forgotten,
+
+lived my life out on a chain
+
+you say you'll SpOiL me RoTtEn ?
+
+those are new words for my brain!
+
+don't think that i did nothing wrong,
+
+but now that i am here
+
+i feel like This where i belong -
+
+these humans Like me near!
+
+am learning 'bout this thing called 'trust'
+
+i never felt before
+
+if This is 'spoil', then Please - you Must!
+
+(it's Good, i'm pretty sure...)
+
+my life has been so sad, n tough,
+
+you give me Hope anew
+
+You make me feel I'm Good enough -
+
+You made my Dreams come True!
+
+❤️
+
+
 
 ### Sample Data Frame Structure
 
-|date_utc   |  timestamp|subreddit | poem_id|line_no |lines                                  |
-|:----------|----------:|:---------|-------:|:-------|:--------------------------------------|
-|2022-02-02 | 1643807131|aww       |       6|1       |> *'Hes not my real brother...*'       |
-|2022-02-02 | 1643807131|aww       |       6|2       |----                                   |
-|2022-02-02 | 1643807131|aww       |       6|3       |the human fills the swimming pool -    |
-|2022-02-02 | 1643807131|aww       |       6|4       |it makes us So excite ^:@) ^^:@D       |
-|2022-02-02 | 1643807131|aww       |       6|5       |i stand n drink the water, cool        |
-|2022-02-02 | 1643807131|aww       |       6|6       |but Brother fren *takes*  ^*flight...* |
-|2022-02-02 | 1643807131|aww       |       6|7       |he *Leaps* in front of pouring hose,   |
-|2022-02-02 | 1643807131|aww       |       6|8       |the WaTeR tries to *BITE!!*            |
-|2022-02-02 | 1643807131|aww       |       6|9       |but why he does, nobody knows -        |
-|2022-02-02 | 1643807131|aww       |       6|10      |(the boy is not quite right...)        |
-|2022-02-02 | 1643807131|aww       |       6|11      |n after when the pool is fill,         |
-|2022-02-02 | 1643807131|aww       |       6|12      |we'll both get in, n *mellow*...       |
-|2022-02-02 | 1643807131|aww       |       6|13      |i Love my bro,                         |
-|2022-02-02 | 1643807131|aww       |       6|14      |but even still                         |
-|2022-02-02 | 1643807131|aww       |       6|15      |he turns the water                     |
-|2022-02-02 | 1643807131|aww       |       6|16      |yellow...                              |
-|2022-02-02 | 1643807131|aww       |       6|17      |d                                      |
+```{r message = FALSE, echo=FALSE}
+readr::read_csv("checkpoints_data/schnoodle_checkpoint1.csv", na = "") %>% head(10) %>% knitr::kable()
+```
 
+                              
 # Problem 2: Poem Line Stats {#part2}
 
 
@@ -110,20 +113,14 @@ Note that if you've done any preliminary data cleaning, to e.g. remove quoted li
 
 ## Sprog Poem Summary
 
-| poem_id|    words| nonletters| uppercase| lowercase| lines|
-|-------:|--------:|----------:|---------:|---------:|-----:|
-|       1| 15.66667|         24|         9|       132|     9|
-|       2| 24.61111|         34|        16|       427|    18|
-|       3| 18.85714|         13|         4|       128|     7|
-|       4| 19.62500|          7|         5|       152|     8|
-|       7| 14.29032|         27|        18|       425|    31|
+
+```{r}
+readr::read_csv("checkpoints_data/sprog_checkpoint2.csv", na = "") %>% knitr::kable()
+```
+
 
 ## Schnoodle Poem Summary
 
-|   | poem_id|    words| nonletters| uppercase| lowercase| line|
-|:--|-------:|--------:|----------:|---------:|---------:|----:|
-|1  |       1| 6.066667|         52|         7|       306|   15|
-|2  |       2| 5.000000|         69|        15|       253|   16|
-|3  |       3| 4.928571|         32|         1|       215|   14|
-|5  |       5| 7.000000|         63|        26|       323|   15|
-|6  |       6| 4.941177|         53|        13|       278|   17|
+```{r}
+readr::read_csv("checkpoints_data/schnoodle_checkpoint2.csv", na = "") %>% knitr::kable()
+```
