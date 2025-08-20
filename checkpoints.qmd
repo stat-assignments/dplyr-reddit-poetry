@@ -1,0 +1,126 @@
+---
+title: "Poetry Checkpoints"
+---
+
+```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr)
+library(dplyr)
+knitr::opts_chunk$set(echo=FALSE, message=FALSE)
+```
+
+# Problem 1: Split the poem into lines and create a data frame {#part1}
+
+Here is some example formatted output from a poem selected from each poet's works to give you an idea of what I am expecting your code to produce (for all of the poems, not just for one single poem). 
+
+## Sprog Poem 1
+
+### Poem
+
+[link](https://www.reddit.com/r/AskReddit/comments/gktfx1/whats_something_youre_glad_your_friend_introduced/)
+
+
+    "Poem for a Friend"
+
+    I know that I don't always see you enough -  
+    With work and with kids and a marriage, it's tough.  
+    You wake and you take it by dawn and by day -  
+    And noon turns to evening, and time slips away. 
+
+    "We'll have to do something," we said when we met -  
+    But you and me, brother, we tend to forget.  
+    We're working -  
+    we're busy -  
+    we both try our best -  
+    And life doesn't always leave room for the rest.  
+
+    But then, with a smile, I remember it's you.  
+    We say that we'll meet, and eventually do.  
+    You're there when I need you, and that doesn't end.  
+    So buddy, be seeing you... 
+
+    maybe.
+
+    Your friend.
+
+    ^^^:)
+
+
+### SampleData
+
+I've selected just a few of the original columns to go along with the new columns created while answering this question.
+
+```{r message = FALSE, echo=FALSE}
+library(dplyr)
+readr::read_csv("checkpoints_data/sprog_checkpoint1.csv", na = "") %>% knitr::kable()
+```
+
+
+## Schnoodle Poem 1
+
+### Poem
+[link](https://www.reddit.com/r/velvethippos/comments/v2jnpz/this_little_lady_is_fostering_with_us_she_was)
+
+```
+> 'You gotta spoil her rotten'
+
+i was the pup, forgotten,
+
+lived my life out on a chain
+
+you say you'll SpOiL me RoTtEn ?
+
+those are new words for my brain!
+
+don't think that i did nothing wrong,
+
+but now that i am here
+
+i feel like This where i belong -
+
+these humans Like me near!
+
+am learning 'bout this thing called 'trust'
+
+i never felt before
+
+if This is 'spoil', then Please - you Must!
+
+(it's Good, i'm pretty sure...)
+
+my life has been so sad, n tough,
+
+you give me Hope anew
+
+You make me feel I'm Good enough -
+
+You made my Dreams come True!
+
+❤️
+
+
+
+### Sample Data Frame Structure
+
+```{r message = FALSE, echo=FALSE}
+readr::read_csv("checkpoints_data/schnoodle_checkpoint1.csv", na = "") %>% head(10) %>% knitr::kable()
+```
+
+                              
+# Problem 2: Poem Line Stats {#part2}
+
+
+Note that if you've done any preliminary data cleaning, to e.g. remove quoted lines or trim white space, your answers may differ, and that is fine. 
+
+## Sprog Poem Summary
+
+
+```{r}
+readr::read_csv("checkpoints_data/sprog_checkpoint2.csv", na = "") %>% knitr::kable()
+```
+
+
+## Schnoodle Poem Summary
+
+```{r}
+readr::read_csv("checkpoints_data/schnoodle_checkpoint2.csv", na = "") %>% knitr::kable()
+```
